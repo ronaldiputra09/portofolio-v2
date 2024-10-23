@@ -21,7 +21,8 @@ return new class extends Migration
             $table->date('dob')->nullable();
             $table->string('photo')->nullable();
             $table->string('cover')->nullable();
-            $table->string('description')->nullable();
+            $table->string('cv')->nullable();
+            $table->text('description')->nullable();
             $table->string('moto')->nullable();
             $table->timestamps();
         });
