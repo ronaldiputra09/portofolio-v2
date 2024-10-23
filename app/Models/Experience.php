@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Project;
 
 class Experience extends Model
 {
@@ -14,6 +15,6 @@ class Experience extends Model
     // relationship with projects
     public function projects()
     {
-        return $this->hasMany(Project::class);
+        return $this->hasMany(Project::class, 'experience_id', 'id', 'projects');
     }
 }
