@@ -3,17 +3,14 @@
 namespace App\Filament\Resources\ExperienceResource\Pages;
 
 use App\Filament\Resources\ExperienceResource;
-use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
 class EditExperience extends EditRecord
 {
     protected static string $resource = ExperienceResource::class;
 
-    protected function getHeaderActions(): array
+    protected function getRedirectUrl(): string
     {
-        return [
-            Actions\DeleteAction::make(),
-        ];
+        return $this->getResource()::getUrl('index');
     }
 }

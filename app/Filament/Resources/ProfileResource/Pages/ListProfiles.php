@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ProfileResource\Pages;
 
 use App\Filament\Resources\ProfileResource;
+use App\Models\Profile;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -12,8 +13,11 @@ class ListProfiles extends ListRecords
 
     protected function getHeaderActions(): array
     {
-        return [
-            Actions\CreateAction::make(),
-        ];
+        if (Profile::count() == 0) {
+            return [
+                Actions\CreateAction::make(),
+            ];
+        }
+        return [];
     }
 }
