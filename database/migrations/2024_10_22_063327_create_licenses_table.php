@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('link');
             $table->string('credential')->nullable();
-            $table->string('icon')->nullable();
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
+            $table->boolean('is_lifetime')->default(false);
             $table->string('photo')->nullable();
             $table->json('skills')->nullable();
             $table->timestamps();

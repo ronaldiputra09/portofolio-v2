@@ -115,6 +115,11 @@ class ExperienceResource extends Resource
                         'contract' => 'Contract',
                         default => 'Unknown',
                     }),
+                TextColumn::make('start_date')
+                    ->label('Start Date'),
+                TextColumn::make('end_date')
+                    ->label('End Date')
+                    ->default('Current Now'),
             ])
             ->filters([
                 //
