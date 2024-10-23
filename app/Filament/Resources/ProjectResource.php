@@ -6,8 +6,6 @@ use App\Filament\Resources\ProjectResource\Pages;
 use App\Models\Experience;
 use App\Models\Project;
 use App\Models\Skill;
-use Faker\Core\File;
-use Faker\Provider\ar_EG\Text;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
@@ -23,7 +21,7 @@ class ProjectResource extends Resource
 {
     protected static ?string $model = Project::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     public static function form(Form $form): Form
     {
