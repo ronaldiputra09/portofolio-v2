@@ -41,13 +41,13 @@ class EducationResource extends Resource
                     ->required()
                     ->placeholder('3.5'),
                 DatePicker::make('start_date')
-                    ->displayFormat('d F Y')
+                    ->displayFormat('mm Y')
                     ->locale('id')
                     ->native(false)
                     ->required()
                     ->placeholder('dd/mm/yyyy'),
                 DatePicker::make('end_date')
-                    ->displayFormat('d F Y')
+                    ->displayFormat('mm Y')
                     ->locale('id')
                     ->native(false)
                     ->required()

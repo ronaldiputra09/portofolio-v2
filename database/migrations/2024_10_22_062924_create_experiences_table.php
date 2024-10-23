@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('location');
             $table->string('type');
             $table->string('start_date');
-            $table->string('end_date');
+            $table->string('end_date')->nullable();
+            $table->boolean('is_current')->default(false);
             $table->text('description');
             $table->string('photo')->nullable();
             $table->json('skills')->nullable();
